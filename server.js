@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const initRedis = require("./init");
+const initRedis = require("./init.redis");
 initRedis.initRedis();
 app.get("/", (req, res) => {
   res.send("Welcome redis");
